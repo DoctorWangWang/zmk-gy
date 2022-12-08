@@ -109,7 +109,7 @@ modcp: mod_copy {
    &kp LCTRL AS(A) AS(R) AS(S) AS(T)  AS(D)         AS(H) AS(N) AS(E)  AS(I)  AS(O)  AS(SQT )  
  &kp LGUI   AS(Z) AS(X) AS(C) AS(V) AS(B)                  AS(K) AS(M)  AS(COMMA) AS(DOT) AS(FSLH)  AS(GRAVE)  
   &mt LALT LPAR  &mt LC(LS(LGUI)) RPAR &kp TAB &kp ESC       &kp BSPC   &mt ENTER SPACE  &kp LBKT  &kp RBKT
- &td1 &reset   &kp UP   &kp DOWN      &kp LEFT  &kp RIGHT &reset  &td2
+  AS(N1) AS(N2)  &kp UP   &kp DOWN      &kp LEFT  &kp RIGHT  AS(N1) AS(N2)
             >;
         };
 
