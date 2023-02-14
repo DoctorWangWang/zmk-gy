@@ -99,10 +99,10 @@ modcp: mod_copy {
             label = "DEFAULT";
             bindings = <
    &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &mt LSHFT LC(C)   AS(EQUAL) &kp N6 &kp N7 &kp N8 &kp N9  &kp N0 &kp MINUS &kp F10  &kp F11   &kp F12 
-   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp TAB ESC AS(Q) AS(W) AS(E) AS(R) AS(T)                      AS(FSLH)  AS(Y) AS(U) AS(I) AS(O) AS(P) AS(BSLH) &kp F7 &kp F8  &kp F9
-   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp ENTER  AS(A) AS(S) AS(D) AS(F) AS(G) &lt 2 LC(V)       AS(H)  AS(J) AS(K) AS(L) AS(SEMI) AS(SQT) &kp F4 &kp F5 &kp F6
-   &kp KP_N0 &kp KP_DOT &mt LCTRL ESC  AS(Z) AS(X) AS(C) AS(V) AS(B)  &kp LGUI              &to 1 AS(N) AS(M) AS(COMMA) AS(DOT) AS(LBKT) AS(RBKT)  &kp F1 &kp F2 
-   &kp DOWN &kp LEFT &kp UP &kp RIGHT &kp BSPC &kp SPACE  &kp LSHFT                         &kp DEL &lt 2 LEFT &lt 1 RIGHT &kp C_VOL_UP  &kp C_VOL_DN  &kp C_BRI_UP &kp C_BRI_DN  
+   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp TAB  AS(Q) AS(W) AS(E) AS(R) AS(T)                      AS(FSLH)  AS(Y) AS(U) AS(I) AS(O) AS(P) AS(BSLH) &kp F7 &kp F8  &kp F9
+   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp ESC  AS(A) AS(S) AS(D) AS(F) AS(G) &lt 2 LC(V)       AS(H)  AS(J) AS(K) AS(L) AS(SEMI) AS(SQT) &kp F4 &kp F5 &kp F6
+   &kp KP_N0 &kp KP_DOT &kp ENTER  AS(Z) AS(X) AS(C) AS(V) AS(B)  &kp LGUI              &to 1 AS(N) AS(M) AS(COMMA) AS(DOT) AS(LBKT) AS(RBKT)  &kp F1 &kp F2 
+   &kp LCTRL &kp DOWN &kp LEFT &kp UP &kp RIGHT &kp BSPC &kp SPACE &kp LSHFT                         &kp DEL &lt 2 LEFT &lt 1 RIGHT &kp C_VOL_UP  &kp C_VOL_DN  &kp C_BRI_UP &kp C_BRI_DN &kp LGUI  
             >;
         };
          
