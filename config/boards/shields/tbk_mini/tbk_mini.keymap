@@ -1,10 +1,7 @@
 
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-
-
 
 #define DEFAULT 0
 #define NUMBER  1
@@ -12,9 +9,6 @@
 #define HOTKEY  3
 #define SETTING 4
 #define AS(keycode) &as LS(keycode) keycode
-
-
-
 
 / {
         behaviors {
@@ -104,67 +98,14 @@ modcp: mod_copy {
        default_layer {
             label = "DEFAULT";
             bindings = <
-   &kp GRAVE  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5            &kp N6    &kp N7     &kp N8   &kp N9     &kp N0   &kp MINUS
-   &mt TAB ESC  AS(Q) AS(W) AS(E) AS(R) AS(T)           AS(Y) AS(U) AS(I)     AS(O)   AS(P)  AS(MINUS) 
-   &kp ENTER AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H) AS(J) AS(K)     AS(L)  AS(SEMI)    AS(SQT) 
-   &kp CAPS  AS(Z) AS(X) AS(C) AS(V) AS(B)                 AS(N) AS(M) AS(COMMA) AS(DOT) AS(FSLH)   AS(BSLH) 
-    &mt LSHFT LC(C) &lt 2 LC(V) &kp BSPC &kp SPACE     &lt 2 LEFT  &lt 1 RIGHT    AS(LBKT)   AS(RBKT)      
- &to 1   &to 1 &mt LCTRL LGUI  &mt LALT DEL     &kp LSHFT   AS(EQUAL)   &mo 3   &mo 3    
+   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &mt LSHFT LC(C)   AS(EQUAL) &kp N6 &kp N7 &kp N8 &kp N9  &kp N0 &kp MINUS &kp F10  &kp F11   &kp F12 
+   &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp TAB ESC AS(Q) AS(W) AS(E) AS(R) AS(T)                      AS(FSLH)  AS(Y) AS(U) AS(I) AS(O) AS(P) AS(BSLH) &kp F7 &kp F8  &kp F9
+   &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp ENTER  AS(A) AS(S) AS(D) AS(F) AS(G) &lt 2 LC(V)       AS(H)  AS(J) AS(K) AS(L) AS(SEMI) AS(SQT) &kp F4 &kp F5 &kp F6
+   &kp KP_N0 &kp KP_DOT &mt LCTRL ESC  AS(Z) AS(X) AS(C) AS(V) AS(B)  &kp LGUI              &to 1 AS(N) AS(M) AS(COMMA) AS(DOT) AS(LBKT) AS(RBKT)  &kp F1 &kp F2 
+   &kp DOWN &kp LEFT &kp UP &kp RIGHT &kp BSPC &kp SPACE  &kp LSHFT                         &kp DEL &lt 2 LEFT &lt 1 RIGHT &kp C_VOL_UP  &kp C_VOL_DN  &kp C_BRI_UP &kp C_BRI_DN  
             >;
         };
-
-
-          number_layer {
-            label = "NUMBER";
-            bindings = <
-    &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6                                &kp F10 &kp F7 &kp F8  &kp F9 &none  &none
-    &macro_phone &macro_email_q  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp PLUS    &kp F11 &kp F7 &kp F8 &kp F9 &none&none 
-    &kp STAR  &kp KP_SLASH  &kp KP_N4 &kp KP_N5  &kp KP_N6 &kp MINUS         &kp F12   &kp F4 &kp F5 &kp F6    &none &none
-    &macro_email_g AS(EQUAL) &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp ENTER            &none  &kp F1 &kp F2 &kp F3 &none &none
-    &kp KP_N0 &kp KP_DOT  &kp BSPC  &kp SPACE                                   &none &none &none &none
-     &trans    &to 0 &to 0  &to 0                                               &none &none &none &none
-            >;
-        };
-
-        symbol_layer {
-            label = "SYMBOL";
-            bindings = <
-&none &none &none &none &none &none                       &none &none &none &none &none &none       
- &kp C_VOL_UP  &kp C_VOL_DN  &kp AMPS  &kp STAR &kp LPAR  &kp RPAR       &none &none &kp UP &none &none &none 
-&kp C_BRI_UP &kp C_BRI_DN &kp DLLR   &kp PRCNT   &kp CARET &none      &none &kp LEFT &kp DOWN &kp RIGHT  &none &none 
- &none  &kp GRAVE &kp EXCL  &kp AT   &kp HASH   &none     &none &none &none &none  &none &none
- &none &none &kp C_RW &kp C_FF                                      &none &none &none &none 
- &none &none &kp LSHFT  &none                                   &none &none &none &none                                                                                           
-        
-         >;
-        };
-
-
-        hotkey_layer {
-            label = "HOTKEY";
-            bindings = <
-   &none &none        &none        &none       &none &none                              &none &none &none &none &none &none
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &reset  &none   &none     &none   &bootloader &bootloader                             &bootloader &bootloader  &none &none &none &reset
-  &kp KP_N4 &none &none &none &none &none                                                 &kp KP_N4 &none &none &none &none &none
-   &none &none &none &none                                                              &none &none &none &none
-   &none &none &none &none                                                              &none &none &none &none                                                     
-            >;
-        };
-
-
-
-        setting_layer {
-            label = "SETTING";
-            bindings = <
-        &none &none &none &none &none &none                                                  &none &none &none &none &none &none
-        &none &none &none &none &none &none                                                  &none &none &none &none &none &none
-        &none &none &none &none &none &none                                                  &none &none &none &none &none &none
-         &none &none &none &none &none &none                                                  &none &none &none &none &none &none
-         &none &none &none &none                                                              &none &none &none &none
-          &none &none &none &none                                                              &none &none &none &none  
-           >;
-       };
+         
    };
 };
 
