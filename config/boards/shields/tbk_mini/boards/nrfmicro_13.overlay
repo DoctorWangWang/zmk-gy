@@ -11,11 +11,11 @@
 
 	led_strip: ws2812@0 {
 		compatible = "worldsemi,ws2812-spi";
-		label = "SK6812mini";
+		label = "WS2812";
 
 		/* SPI */
 		reg = <0>; /* ignored, but necessary for SPI bindings */
-		spi-max-frequency = <4000000>;
+		spi-max-frequency = <5250000>;
 
 		/* WS2812 */
 		chain-length = <54>; /* There are per-key RGB, but the first 6 are underglow */
@@ -31,5 +31,6 @@
 / {
 	chosen {
 		zmk,underglow = &led_strip;
+		zmk,battery = &vbatt;
 	};
 };
